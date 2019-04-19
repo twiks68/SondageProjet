@@ -40,10 +40,6 @@ namespace SondageProjet.Models
                 //On avance sur la première ligne
 
                int recupererIdSondage = (int)insererSondageBDD.ExecuteScalar();
-
-
-                
-
                 return recupererIdSondage;
             }
         }
