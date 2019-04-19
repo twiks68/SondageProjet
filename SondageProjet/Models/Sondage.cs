@@ -30,6 +30,21 @@ namespace SondageProjet.Models
             NumProtection = numProtection;
         }
 
+        public static int Coche(string connecte) 
+        {
+        int premier = 0;
+        if (connecte !=null)
+            {
+            
+            premier = 1;
+            }
+            return premier;
+
+        }
+
+        
+
+
 
 
         //
