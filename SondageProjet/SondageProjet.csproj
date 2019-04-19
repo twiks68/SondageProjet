@@ -121,7 +121,6 @@
     <Compile Include="Models\NombreVotant.cs" />
     <Compile Include="Models\Reponse.cs" />
     <Compile Include="Models\Sondage.cs" />
-    <Compile Include="Models\SondageModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using SondageProjet.Models;
 
 namespace SondageProjet.Controllers
 {
@@ -47,6 +48,27 @@ namespace SondageProjet.Controllers
             //int iD = DataAccess.InsererSondage(model);
 
             return RedirectToAction("ConfirmationCreation");
+        }
+
+        public ActionResult CreationSondage(string question, string choix1, string choix2, string choix3, string choix4, bool isChoixMultiple, bool isDisabled, string numProtection)
+        {
+
+
+
+
+
+
+            bool coche = isChoixMultiple.GetValueOrDefault(false);
+            Sondage sondage = new Sondage(0, question, nombreVoteC1, nombreVoteC2, nombreVoteC3, nombreVoteC4, coche);
+
+            
+
+            creationsondage Sondage = new creationsondage(sondage);
+
+            int idSondageCree = DataAccess.CreerNouveauSondage(sondage);
+            DataAccess.CreerNouveauResultat(idSondageCree);
+
+            return RedirectToAction("ChoixVotant", new { idSondage = idSondageCree });
         }
 
 
