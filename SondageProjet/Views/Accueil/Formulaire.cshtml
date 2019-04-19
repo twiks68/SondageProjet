@@ -1,4 +1,4 @@
-﻿
+﻿@using SondageProjet.Models
 @{
     ViewBag.Title = "Formulaire Creation d'un Sondage";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -47,7 +47,7 @@
                 <div class="col-sm-10">
                     
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Reponse multiple">
+                        <input class="form-check-input" type="radio" name="choixMultiple" id="choixMultiple" value="Reponse multiple">
                         <label class="form-check-label" for="gridRadios2">
                             Reponse multiple
                         </label>
@@ -61,7 +61,7 @@
             <div class="col-sm-10">
 
                 <input type="submit" class="btn btn-primary" value="Créer le sondage" />
-                <button class="btn btn-primary" onclick="document.getElementById('question','choix1','choix2','choix3','choix4').value = ''">Annuler</button>
+                
 
             </div>
         </div>
