@@ -9,7 +9,7 @@ namespace SondageProjet.Models
     {
         public Sondage SondageEnCours { get; private set; }
 
-        public ConfirmationSondageModel(Sondage sondageConfiramtion)
+        public ConfirmationSondageModel(Sondage sondageConfirmation)
         {
 
         }
