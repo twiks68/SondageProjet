@@ -1,0 +1,36 @@
+﻿@using SondageProjet.Models
+@model Sondage
+
+
+@{
+    ViewBag.Title = "DejaVoter";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DejaVoter</title>
+</head>
+<body>
+
+    <div>
+        <h1 style="text-align:center" >VOUS NE POUVEZ PAS REVOTER </h1>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+
+    <div>
+        <a style="margin-left:30% ;margin-right:30%" type="button" class="btn btn-primary" href="@Url.Action("Accueil")">ACCUEIL</a><br /><br />
+        <a style="margin-left:30%;margin-right:30%" href="@Url.Action("Resultat", new { idSondage = Model.IdSondage })" class="btn col btn-primary  ">RESULTAT</a>
+    </div>
+
+
+</body>
+</html>

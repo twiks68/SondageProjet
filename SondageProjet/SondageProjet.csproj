@@ -104,9 +104,7 @@
     <Content Include="Web.config" />
     <Content Include="Views\Accueil\Accueil.cshtml" />
     <Content Include="Views\Accueil\Formulaire.cshtml" />
-    <Content Include="Views\Accueil\LiensGeneres.cshtml" />
     <Content Include="Views\Accueil\Resultat.cshtml" />
-    <Content Include="Views\Accueil\SubmitLiensGeneres.cshtml" />
     <Content Include="Views\Accueil\Vote.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -132,6 +130,13 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\Nav.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Accueil\PageVote.cshtml" />
+    <Content Include="Views\Accueil\ImpossibleDevoter.cshtml" />
+    <Content Include="Views\Accueil\DejaVoter.cshtml" />
+    <Content Include="Views\Accueil\SondageDejaSupprimer.cshtml" />
+    <Content Include="Views\Accueil\ConfirmationSuppression.cshtml" />
+    <Content Include="Views\Accueil\SupprimerSondage.cshtml" />
+    <Content Include="Views\Shared\DispositionResultatPourcentage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

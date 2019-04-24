@@ -1,29 +1,73 @@
-﻿
+﻿@using SondageProjet.Models
+@model Reponse
+
+
 @{
     ViewBag.Title = "Resultat";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/DispositionResultatPourcentage.cshtml";
 }
 
 
-
-<div>
-    <h1>Resultat</h1>
-
-    <p>choix 1 : <progress value="10" max="100">10 %</progress> </p>
-
-    <p>choix 2 : <progress value="30" max="100">30 %</progress> </p>
-
-    <p>choix 3 : <progress value="70" max="100">70 %</progress> </p>
+    <h2 style="margin-left:30%; margin-right:30%">PAGE RESULTAT</h2>
 
 
+    <div>
+
+        <label class="form-check-label" for="exampleCheck1" style="margin-left:30%; margin-right:30%">@Model.ModelSondage.Question</label>
+    </div>
+
+    <br />
+    
+
+    <label class="form-check-label" for="exampleCheck1" style="margin-left:30%; margin-right:30%">@Model.ModelSondage.Choix1</label>
+    <div class="progress" style="margin-left:30%; margin-right:30%">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="@(Model.PourcentageReponse1)" aria-valuemin="0" aria-valuemax="100" style="width: @(Model.PourcentageReponse1)%">
+
+        </div>
+    </div>
+    <input style="margin-left:29%; margin-right:30%" type="text" readonly class="form-control-plaintext text-dark  col pourcentageVote" value=" @(Model.PourcentageReponse1) %"><br />
+
+
+    <label class="form-check-label" for="exampleCheck1" style="margin-left:30%; margin-right:30%">@Model.ModelSondage.Choix2</label> <br />
+    <div class="progress" style="margin-left:30%; margin-right:30%">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="@(Model.PourcentageReponse2)" aria-valuemin="0" aria-valuemax="100" style="width: @(Model.PourcentageReponse2)%">
+
+        </div>
+    </div>
+    <input style="margin-left:29%; margin-right:30%" type="text" readonly class="form-control-plaintext text-dark  col pourcentageVote" value=" @(Model.PourcentageReponse2) %"><br />
+
+
+    <label class="form-check-label" for="exampleCheck1" style="margin-left:30%; margin-right:30%">@Model.ModelSondage.Choix3</label> <br />
+    <div class="progress" style="margin-left:30%; margin-right:30%">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="@(Model.PourcentageReponse3)" aria-valuemin="0" aria-valuemax="100" style="width:@(Model.PourcentageReponse3)%">
+
+        </div>
+    </div>
+    <input style="margin-left:29%; margin-right:30%" type="text" readonly class="form-control-plaintext text-dark  col pourcentageVote" value=" @(Model.PourcentageReponse3) %"><br />
 
 
 
+    <label class="form-check-label" for="exampleCheck1" style="margin-left:30%; margin-right:30%">@Model.ModelSondage.Choix4</label> <br />
+    <div class="progress" style="margin-left:30%; margin-right:30%">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="@(Model.PourcentageReponse4)" aria-valuemin="0" aria-valuemax="100" style="width:@(Model.PourcentageReponse4)%">
+
+        </div>
+    </div>
+    <input style="margin-left:29%; margin-right:30%" type="text" readonly class="form-control-plaintext text-dark  col pourcentageVote" value=" @(Model.PourcentageReponse4) %"><br />
+
+    <div class="form-group row">
+        <h2 class="col-sm-10">
+            <input style="margin-left:29%; margin-right:30%" type="text" readonly class="form-control-plaintext text-center" value="@Model.NombreTotalVote Votes">
+        </h2>
+    </div>
 
 
-    <a href="@Url.Action("Accueil")" class="btn btn-primary">Accueil</a>
+    <div style="align-items:initial">
+
+        <a style="margin-left:30% ;margin-right:30%" type="button" class="btn btn-primary" href="@Url.Action("PageVote", new { idSondage = Model.ModelSondage.IdSondage})">VOTER</a><br /><br />
+        <a style="margin-left:30% ;margin-right:30%" type="button" class="btn btn-primary" href="@Url.Action("Accueil", new { idSondage = Model.ModelSondage.IdSondage})">ACCUEIL</a>
+    </div>
+
+    
 
 
-
-
-</div>

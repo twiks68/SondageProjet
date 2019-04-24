@@ -1,4 +1,5 @@
-﻿
+﻿@using SondageProjet.Models
+@model Sondage
 @{
     ViewBag.Title = "Vote";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,4 +7,14 @@
 
 <h1>Vote</h1>
 
-<a href="@Url.Action("Resultat")" class="btn btn-primary">Valider</a>
+
+<a style="padding-left:40%" href="@Url.Action("PageVote",new {idSondage=Model.IdSondage})" target="_self">@Url.Action("PageVote", new { idSondage = Model.IdSondage })</a>
+<br />
+
+<br />
+<a style="padding-left:40%" href="@Url.Action("Resultat",new {idSondage=Model.IdSondage})" target="_self">@Url.Action("Resultat", new { idSondage = Model.IdSondage })</a>
+<br />
+<br />
+
+<a style="padding-left:40%" href="@Url.Action("ConfirmationSuppression",new {idSondage=Model.IdSondage, numProtection = Model.NumProtection})" target="_self">@Url.Action("Desactiver", new { idSondage = Model.IdSondage, numProtection = Model.NumProtection })</a><p>Le troisième lien de désactivation est a conserver precieusement !</p>
+
